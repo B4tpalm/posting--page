@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Publicação | Novo Artigo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        
+        <header class="app-header">
+            <h1>Nova Publicação</h1>
+        </header>
+
+        <main class="content-area">
+            <section class="form-section">
+                <form id="postForm" class="post-form">
+                    <div class="input-group">
+                        <label for="tituloInput" class="sr-only">Título do Artigo</label>
+                        <input type="text" id="tituloInput" name="titulo" required placeholder="Título do Artigo" aria-label="Título do Artigo">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="conteudoTextarea" class="sr-only">Corpo do Conteúdo</label>
+                        <textarea id="conteudoTextarea" name="conteudo" required rows="15" placeholder="Escreva o corpo do seu artigo aqui..." aria-label="Corpo do Conteúdo"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submitButton" class="btn-submit">Publicar Artigo</button>
+                </form>
+            </section>
+
+            <section class="output-section">
+                <h2>Retorno da API (Simulação)</h2>
+                <article class="post-preview">
+                    <h3 id="renderizador-titulo" class="preview-title"></h3>
+                    <p id="renderizador-conteudo" class="preview-content"></p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
